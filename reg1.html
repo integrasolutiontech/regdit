@@ -19,6 +19,31 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+      .custom-range {
+        width: 100%;
+      }
+  
+      input[type="range"]::-webkit-slider-thumb {
+  background-color: yellow;
+}
+
+input[type="range"]::-moz-range-thumb {
+  background-color: yellow;
+}
+
+input[type="range"]::-ms-thumb {
+  background-color: yellow;
+  
+}
+.yellow-outline {
+    outline: 2px solid yellow;
+    border-radius: 5px;
+}
+
+
+    </style>
     <style>
         .notification {
           position: fixed;
@@ -200,7 +225,11 @@
 
     <!-- main-area -->
     <main class="main--area">
-bt
+  <style>
+    .custom-range {
+      width: 100%;
+    }
+  </style>
         <!-- contact-area -->
         <section class="contact-area">
         <div class="container">
@@ -225,7 +254,77 @@ bt
                             <br> <br>
                             <button  type="submit" class=" main-btn model-btn submit-btn col-12">NO BAN </button>
                             <br> <br> <br>
-                            <button  type="submit" class=" main-btn  submit-btn col-12 free">OPEN FREE FIRE </button>
+                            
+    <!-- المحتوى الحالي للجسم -->
+
+        <!-- المحتوى الحالي لقسم الاتصال -->
+                <h4>sensability</h4>
+                <br>
+                <div class="container yellow-outline">
+                    <br>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-6 col-md-10">
+                            <!-- الكود الأصلي للعناصر التي تحتوي على range -->
+                
+                            <div class="container">
+                                <div class="row">
+                                    <h6 class="col-2">Genral</h6>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <input type="range" class="custom-range col-5" min="0" max="100" value="12" id="myRange1">
+                                    <span id="rangeValue1" class="col-2" style="color: white;">0</span>
+                                </div>
+                            </div>
+                            
+                            <!-- نسخة أخرى من العنصر الذي يحتوي على range -->
+                            <br>
+                            <div class="container">
+                                <div class="row">
+                                    <h6 class="col-2">REDDOT</h6>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <input type="range" class="custom-range col-5" min="0" max="100" value="12" id="myRange2">
+                                    <span id="rangeValue2" class="col-2" style="color: white;">0</span>
+                                </div>
+                            </div>
+                            <br>
+                            <!-- نسخة أخرى من العنصر الذي يحتوي على range -->
+                
+                            <div class="container">
+                                <div class="row">
+                                    <h6 class="col-2">Mir&nbsp;2x</h6>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <input type="range" class="custom-range col-5" min="0" max="100" value="12" id="myRange3">
+                                    <span id="rangeValue3" class="col-2" style="color: white;">0</span>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="container">
+                                <div class="row">
+                                    <h6 class="col-2">Mir&nbsp;4x</h6>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <input type="range" class="custom-range col-5" min="0" max="100" value="12" id="myRange4">
+                                    <span id="rangeValue4" class="col-2" style="color: white;">0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+                
+                <script>
+                    // اسماء العناصر والقيم المرتبطة بها للعرض
+                    const rangeNames = ['rangeValue1', 'rangeValue2', 'rangeValue3', 'rangeValue4'];
+                
+                    // حلقة لتعيين المعرفات لكل عنصر input من نوع range
+                    rangeNames.forEach(function(rangeName, index) {
+                        const range = document.getElementById(`myRange${index+1}`);
+                        const display = document.getElementById(rangeName);
+                
+                        range.addEventListener('input', function() {
+                            display.textContent = range.value;
+                        });
+                    });
+                </script>
+                
                         </center>
                         </form>
                     
